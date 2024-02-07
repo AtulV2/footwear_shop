@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="FilterViewForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="HomeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="loginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ProductEditForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ProductForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
