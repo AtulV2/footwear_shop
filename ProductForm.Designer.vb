@@ -22,6 +22,7 @@ Partial Class ProductForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProductForm))
         Closure_TypeTBox = New TextBox()
         Sole_MaterialTBox = New TextBox()
         Water_Resistance_LevelTBox = New TextBox()
@@ -357,6 +358,7 @@ Partial Class ProductForm
         Controls.Add(Label2)
         Controls.Add(Label1)
         Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(3, 4, 3, 4)
         Name = "ProductForm"
         Text = "ProductForm"

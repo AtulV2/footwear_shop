@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FootWearShop\\FSIMS.vbproj": {}
+    "D:\\Footwear Shop\\source code\\FSIMS.vbproj": {}
   },
   "projects": {
-    "D:\\FootWearShop\\FSIMS.vbproj": {
+    "D:\\Footwear Shop\\source code\\FSIMS.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FootWearShop\\FSIMS.vbproj",
+        "projectUniqueName": "D:\\Footwear Shop\\source code\\FSIMS.vbproj",
         "projectName": "FSIMS",
-        "projectPath": "D:\\FootWearShop\\FSIMS.vbproj",
+        "projectPath": "D:\\Footwear Shop\\source code\\FSIMS.vbproj",
         "packagesPath": "C:\\Users\\Atul\\.nuget\\packages\\",
-        "outputPath": "D:\\FootWearShop\\obj\\",
+        "outputPath": "D:\\Footwear Shop\\source code\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Atul\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,9 +40,9 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
-            "Oracle.ManagedDataAccess.Core": {
+            "System.Data.SQLite": {
               "target": "Package",
-              "version": "[3.21.130, )"
+              "version": "[1.0.118, )"
             }
           },
           "imports": [

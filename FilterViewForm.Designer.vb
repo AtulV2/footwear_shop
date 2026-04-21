@@ -22,6 +22,7 @@ Partial Class FilterViewForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FilterViewForm))
         FilterBtn = New Button()
         Closure_TypeTBox = New TextBox()
         Sole_MaterialTBox = New TextBox()
@@ -365,6 +366,7 @@ Partial Class FilterViewForm
         Controls.Add(Label15)
         Controls.Add(Label16)
         Controls.Add(Label17)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "FilterViewForm"
         Text = "FilterViewForm"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()

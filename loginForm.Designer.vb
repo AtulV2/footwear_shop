@@ -22,22 +22,23 @@ Partial Class loginForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(loginForm))
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
-        TextBox1 = New TextBox()
-        TextBox2 = New TextBox()
+        idTBox = New TextBox()
+        passTBox = New TextBox()
         Button1 = New Button()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(139, 134)
+        Label1.Location = New Point(148, 137)
         Label1.Name = "Label1"
-        Label1.Size = New Size(116, 30)
+        Label1.Size = New Size(81, 30)
         Label1.TabIndex = 0
-        Label1.Text = "User Name"
+        Label1.Text = "User ID"
         ' 
         ' Label2
         ' 
@@ -57,19 +58,20 @@ Partial Class loginForm
         Label3.TabIndex = 1
         Label3.Text = "Enter Login Details"
         ' 
-        ' TextBox1
+        ' idTBox
         ' 
-        TextBox1.Location = New Point(340, 134)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(189, 35)
-        TextBox1.TabIndex = 2
+        idTBox.CharacterCasing = CharacterCasing.Upper
+        idTBox.Location = New Point(340, 134)
+        idTBox.Name = "idTBox"
+        idTBox.Size = New Size(189, 35)
+        idTBox.TabIndex = 2
         ' 
-        ' TextBox2
+        ' passTBox
         ' 
-        TextBox2.Location = New Point(340, 225)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(189, 35)
-        TextBox2.TabIndex = 3
+        passTBox.Location = New Point(340, 225)
+        passTBox.Name = "passTBox"
+        passTBox.Size = New Size(189, 35)
+        passTBox.TabIndex = 3
         ' 
         ' Button1
         ' 
@@ -86,12 +88,13 @@ Partial Class loginForm
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(680, 418)
         Controls.Add(Button1)
-        Controls.Add(TextBox2)
-        Controls.Add(TextBox1)
+        Controls.Add(passTBox)
+        Controls.Add(idTBox)
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
         Font = New Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(5, 6, 5, 6)
         Name = "loginForm"
         Text = "loginForm"
@@ -102,7 +105,7 @@ Partial Class loginForm
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents idTBox As TextBox
+    Friend WithEvents passTBox As TextBox
     Friend WithEvents Button1 As Button
 End Class

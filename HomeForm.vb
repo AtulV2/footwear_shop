@@ -1,47 +1,34 @@
-﻿Imports System.Drawing.Printing
-Imports System.Security.Cryptography
+﻿Imports System.Data.SQLite
+Imports System.Drawing.Printing
 Imports System.Text.RegularExpressions
-Imports Oracle.ManagedDataAccess.Client
-
 Public Class HomeForm
-
-
-
-
     Private Sub AddItemsToComboBox()
-        cnn.Open()
-        Dim cmd As New OracleCommand("select pid from inventory_table", cnn)
-        Dim da As New OracleDataAdapter(cmd)
+
+        conn.Open()
+
+        Dim cmd As New SQLiteCommand("select pid from inventory_table", conn)
+        Dim da As New SQLiteDataAdapter(cmd)
         Dim db As DataTable = New DataTable
         da.Fill(db)
 
         ComboBox1.DisplayMember = "pid"
         ComboBox1.ValueMember = "pid"
         ComboBox1.DataSource = db
-        cnn.Close()
+        conn.Close()
     End Sub
 
     Private Sub Ref_Click(sender As Object, e As EventArgs) Handles Ref.Click
         Call AddItemsToComboBox()
         Call FillInvetoryToDataGrideView()
-
     End Sub
-
-    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
-
-
-    End Sub
-
     Sub FillInvetoryToDataGrideView()
-        cnn.Open()
-        Dim cmd As New OracleCommand("select * from inventory_table order by pid", cnn)
-        Dim reader As OracleDataReader = cmd.ExecuteReader
+        conn.Open()
+        Dim cmd As New SQLiteCommand("select * from inventory_table order by pid", conn)
+        Dim reader As SQLiteDataReader = cmd.ExecuteReader
         Dim DT As New DataTable
         DT.Load(reader)
         DGVForInventory.DataSource = DT
-
-        cnn.Close()
-
+        conn.Close()
     End Sub
 
     Private Sub ProductBtn_Click(sender As Object, e As EventArgs) Handles ProductBtn.Click
@@ -55,13 +42,11 @@ Public Class HomeForm
     Private Sub GoToAddProductFormBtn_Click(sender As Object, e As EventArgs) Handles GoToAddProductFormBtn.Click
         Me.Hide()
         ProductForm.Show()
-
     End Sub
 
     Private Sub GoToProductEditFormBtn_Click(sender As Object, e As EventArgs) Handles GoToProductEditFormBtn.Click, GoToProductEditFormBtn2.Click
         Me.Hide()
         ProductEditForm.Show()
-
     End Sub
 
     Private Sub AddInventoryBtn_Click(sender As Object, e As EventArgs) Handles AddInventoryBtn.Click
@@ -70,29 +55,14 @@ Public Class HomeForm
         Dim Sprice As Integer = Integer.Parse(SPriceTBox.Text)
         Dim punits_available As Integer = Integer.Parse(ProcutUnitsTBox.Text)
 
-        cnn.Open()
+        conn.Open()
 
-        Dim cmd2 As New OracleCommand("select pid from inventory_table where pid = " & pid, cnn)
-        Dim reader2 As OracleDataReader = cmd2.ExecuteReader
-        If reader2.HasRows Then
-            Dim Query2 As String = "update inventory_table set cprice =  " & cprice & ",sprice = " & Sprice & ", punits_available = " & punits_available & "where pid = " & pid
-            Dim cmd3 As New OracleCommand(Query2, cnn)
+        Dim Query2 As String = "update inventory_table set cprice =  " & cprice & ",sprice = " & Sprice & ", punits_available = " & punits_available & " where pid = " & pid
+            Dim cmd3 As SQLiteCommand
+            cmd3 = conn.CreateCommand
+            cmd3.CommandText = Query2
             cmd3.ExecuteNonQuery()
-
-        Else
-
-            Dim cmd As New OracleCommand("insert into inventory_table (pid,cprice,sprice,punits_available) 
-        values(
-            " & pid & ",
-            " & cprice & ",
-            " & Sprice & ",
-            " & punits_available & "
-        )", cnn)
-            cmd.ExecuteNonQuery()
-
-        End If
-
-        cnn.Close()
+            conn.Close()
 
         Call FillInvetoryToDataGrideView()
     End Sub
@@ -110,16 +80,16 @@ Public Class HomeForm
 
 
 
-        cnn.Open()
-        Dim cmd As New OracleCommand("select pid from inventory_table", cnn)
-        Dim da As New OracleDataAdapter(cmd)
+        conn.Open()
+        Dim cmd As New SQLiteCommand("select pid from inventory_table", conn)
+        Dim da As New SQLiteDataAdapter(cmd)
         Dim db As DataTable = New DataTable
         da.Fill(db)
 
         pid2CBox.DisplayMember = "pid"
         pid2CBox.ValueMember = "pid"
         pid2CBox.DataSource = db
-        cnn.Close()
+        conn.Close()
     End Sub
 
     Dim sprice As Integer
@@ -136,16 +106,18 @@ Public Class HomeForm
 
 
         Try
-            pid = Integer.Parse(pid2CBox.SelectedValue)
+            pid = Integer.Parse(pid2CBox.Text)
             If CPhoneTBox.Text.Length = 10 Then
-                cphone = Integer.Parse(CPhoneTBox.Text)
+                cphone = Long.Parse(CPhoneTBox.Text)
             Else
                 cphone = 0
             End If
 
             punits = Integer.Parse(pUnits2TBox.Text)
 
-        Catch
+        Catch ex As Exception
+            '  MsgBox(ex.Message)
+
             pid = -1
             cphone = 0
             punits = 0
@@ -159,18 +131,36 @@ Public Class HomeForm
 
 
 
-        cnn.Open()
-        Dim cmd As New OracleCommand("select * from inventory_table where pid=" & pid, cnn)
-        Dim reader As OracleDataReader = cmd.ExecuteReader
+        conn.Open()
+        Dim cmd As New SQLiteCommand("select pname,cprice,sprice,punits_available from inventory_table where pid=" & pid, conn)
+        Dim reader As SQLiteDataReader = cmd.ExecuteReader
         While reader.Read
 
-            pname = reader.GetString(4)
-            cprice = Integer.Parse(reader.GetString(1))
-            sprice = Integer.Parse(reader.GetString(2))
-            punits_available = Integer.Parse(reader.GetString(3))
+            'pname = reader.GetString(4)
+            'cprice = Integer.Parse(reader.GetString(1))           
+            'sprice = Integer.Parse(reader.GetString(2))
+            'punits_available = Integer.Parse(reader.GetString(3))
 
+
+            pname = reader.GetString(0)
+            cprice = reader.GetInt32(1)
+            sprice = reader.GetInt32(2)
+            punits_available = reader.GetInt32(3)
+            '  MsgBox(reader.GetDataTypeName(2))
+
+
+            ''  pname = reader.GetString(0)
+            'pname = "hlsfjda"
+            ''   cprice = reader.GetInt32(1)
+            'cprice = 83
+            '' sprice = Integer.Parse(reader.GetString(2))
+            'sprice = 232
+
+            'MsgBox(reader.GetString(0) & " -" & reader.GetInt32(1) & " - " & reader.GetInt32(2))
+            '' punits_available = Integer.Parse(reader.GetString(3))
+            'punits_available = 212
         End While
-
+        conn.Close()
         If pid = -1 Then
             MsgBox("Please enter product id")
 
@@ -191,53 +181,57 @@ Public Class HomeForm
             BillDGV.Rows.Item(rnum).Cells("Total_Price").Value = sprice * punits
 
             GrandTotal += (sprice * punits)
+
+
+            Call update()
         Else
             MsgBox("Stock not available")
         End If
 
         GrandTotalLabel.Text = GrandTotal
 
-        cnn.Close()
-        Call update()
+
     End Sub
 
     Sub update()
-        cnn.Open()
+        conn.Open()
         Dim Query As String = "update inventory_table set punits_available= " & punits_available - punits & " where pid =" & pid
-        Dim cmd As New OracleCommand(Query, cnn)
+        Dim cmd As New SQLiteCommand(Query, conn)
         cmd.ExecuteNonQuery()
-        cnn.Close()
+        conn.Close()
     End Sub
 
-    Dim tid As Integer = 1
+    Dim tid
     Private Sub GenerateBillBtn_Click(sender As Object, e As EventArgs) Handles GenerateBillBtn.Click
 
-        cnn.Open()
+
         Dim rowCount As Integer = BillDGV.RowCount
         Dim pid As Integer
         Dim Unit As Integer
         Dim Today As Date = Date.Now
-        Dim TodayStr As String = Format(Today, "dd-MM-yyyy")
+        Dim TodayStr As String = Format(Today, "yyyy-MM-dd")
 
         Dim cprice As Integer
         Dim sprice As Integer
 
         Dim cname As String = CNameTBox.Text
-        Dim cphone As String = Integer.Parse(CPhoneTBox.Text)
+        Dim cphone As String = CPhoneTBox.Text
 
 
-        Try
 
-            Dim cmd As New OracleCommand("Select max(tid) from selles_table", cnn)
-            Dim reader As OracleDataReader = cmd.ExecuteReader
-            While reader.Read
-                tid = Integer.Parse(reader.GetString(0))
+        conn.Open()
+        Dim cmd As New SQLiteCommand("Select max(tid) from selles_table", conn)
+            Dim reader As SQLiteDataReader = cmd.ExecuteReader
+        While reader.Read
+            Try
+                tid = reader.GetInt32(0)
                 tid += 1
-            End While
+            Catch
+                tid = 1
+            End Try
+        End While
+            conn.Close()
 
-        Catch ex As Exception
-
-        End Try
 
 
 
@@ -246,13 +240,15 @@ Public Class HomeForm
             pid = Integer.Parse(BillDGV.Item(2, j).Value)
             Unit = Integer.Parse(BillDGV.Item(4, j).Value)
 
+            conn.Open()
             Dim Query As String = "select * from inventory_table where pid = " & pid
-            Dim cmd As New OracleCommand(Query, cnn)
-            Dim r As OracleDataReader = cmd.ExecuteReader
+            Dim cmd2 As New SQLiteCommand(Query, conn)
+            Dim r As SQLiteDataReader = cmd2.ExecuteReader
             While r.Read
-                cprice = Integer.Parse(r.GetString(1))
-                sprice = Integer.Parse(r.GetString(2))
+                cprice = r.GetInt32(1)
+                sprice = r.GetInt32(2)
             End While
+
 
             Dim Query2 = "insert into selles_table (tid,pid,punits,cprice,sprice,purchase_date,cname,cphone) values(
                 " & tid & ",
@@ -260,18 +256,19 @@ Public Class HomeForm
                 " & Unit & ",
                 " & cprice & ",
                 " & sprice & ",
-             TO_DATE('   " & TodayStr & "','DD-MM-YYYY'),
+             DATE('" & TodayStr & "'),
                ' " & cname & "',
                 " & cphone & "
             
             )"
 
-            Dim cmd2 As New OracleCommand(Query2, cnn)
-            cmd2.ExecuteNonQuery()
+            Dim cmd3 As New SQLiteCommand(Query2, conn)
+            cmd3.ExecuteNonQuery()
+            conn.Close()
         Next
 
-        cnn.Close()
 
+        'TO_DATE('   " & TodayStr & "','DD-MM-YYYY'),
 
         ppd.Document = pd
         ppd.ShowDialog()
@@ -297,22 +294,22 @@ Public Class HomeForm
             Dim pid2 = Integer.Parse(BillDGV.Item(colIndexpid, rowIndex).Value)
             Dim Unit = Integer.Parse(BillDGV.Item(colIndexUnit, rowIndex).Value)
 
-            Dim UnitAvailable As Integer
-            cnn.Open()
+            Dim UnitAvailable
+            conn.Open()
             Dim Query2 As String = "select punits_available from inventory_table where pid = " & pid
-            Dim cmd2 As New OracleCommand(Query2, cnn)
-            Dim reader As OracleDataReader = cmd2.ExecuteReader
+            Dim cmd2 As New SQLiteCommand(Query2, conn)
+            Dim reader As SQLiteDataReader = cmd2.ExecuteReader
             While reader.Read
-                UnitAvailable = Integer.Parse(reader.GetString(0))
+                UnitAvailable = reader.GetInt32(0)
             End While
 
             Dim sum As Integer = UnitAvailable + Unit
 
             Dim Query As String = "update inventory_table set punits_available= " & sum & " where pid =" & pid2
-            Dim cmd As New OracleCommand(Query, cnn)
+            Dim cmd As New SQLiteCommand(Query, conn)
             cmd.ExecuteNonQuery()
 
-            cnn.Close()
+            conn.Close()
 
 
 
@@ -326,23 +323,25 @@ Public Class HomeForm
     End Sub
 
     Private Sub ProfitCalculateBtn_Click(sender As Object, e As EventArgs) Handles ProfitCalculateBtn.Click
-        cnn.Open()
-        Dim profit As Long
+        conn.Open()
+        Dim profit
         Dim D1 = DateTimePicker1.Value
-        Dim da1 As String = Format(D1, "dd-MM-yyyy")
+        Dim da1 As String = Format(D1, "yyyy-MM-dd")
 
         Dim D2 = DateTimePicker2.Value
-        Dim da2 As String = Format(D2, "dd-MM-yyyy")
+        Dim da2 As String = Format(D2, "yyyy-MM-dd")
 
-        Dim Query As String = "select SUM((sprice - cprice)*punits) as profit from selles_table where purchase_date >= TO_DATE('" & da1 & "','DD-MM-YYYY') AND Purchase_date <= TO_DATE('" & da2 & "','DD-MM-YYYY')"
-        Dim cmd As New OracleCommand(Query, cnn)
-        Dim r As OracleDataReader = cmd.ExecuteReader
+        Dim Query As String = "select SUM((sprice - cprice)*punits) as profit from selles_table where purchase_date >= DATE('" & da1 & "') AND Purchase_date <= DATE('" & da2 & "')"
+        Dim cmd As New SQLiteCommand(Query, conn)
+        Dim r As SQLiteDataReader = cmd.ExecuteReader
         Try
 
             While r.Read
-                profit = r.GetString(0)
+                profit = r.GetInt32(0)
             End While
-        Catch
+        Catch exception As Exception
+            ' MsgBox(exception.Message & profit)
+
             profit = 0
         End Try
 
@@ -351,8 +350,9 @@ Public Class HomeForm
         ' select SUM((sprice - cprice)*punits) as profit from selles_table where purchase_date >= TO_DATE('21-01-2024','DD-MM-YYYY') AND Purchase_date <= TO_DATE('21-01-2024','DD-MM-YYYY')
 
 
-        Query = "select pid,SUM((sprice - cprice)*punits) as profit from selles_table where purchase_date >= TO_DATE('" & da1 & "','DD-MM-YYYY') AND Purchase_date <= TO_DATE('" & da2 & "','DD-MM-YYYY') group by pid"
-        cmd = New OracleCommand(Query, cnn)
+        Query = "select pid,SUM((sprice - cprice)*punits) as profit from selles_table where purchase_date >= DATE('" & da1 & "') AND Purchase_date <= DATE('" & da2 & "') group by pid"
+
+        cmd = New SQLiteCommand(Query, conn)
         r = cmd.ExecuteReader
 
         Dim dt As New DataTable
@@ -363,7 +363,7 @@ Public Class HomeForm
 
 
 
-        cnn.Close()
+        conn.Close()
 
 
 
@@ -371,21 +371,21 @@ Public Class HomeForm
     End Sub
 
     Private Sub A2Btn_Click(sender As Object, e As EventArgs) Handles A2Btn.Click
-        cnn.Open()
-        Dim TotalProdut As Long
+        conn.Open()
+        Dim TotalProdut
         Dim D1 = DateTimePicker3.Value
-        Dim da1 As String = Format(D1, "dd-MM-yyyy")
+        Dim da1 As String = Format(D1, "yyyy-MM-dd")
 
         Dim D2 = DateTimePicker4.Value
-        Dim da2 As String = Format(D2, "dd-MM-yyyy")
+        Dim da2 As String = Format(D2, "yyyy-MM-dd")
 
-        Dim Query As String = "select SUM(PUNITS) from selles_table where purchase_date >= TO_DATE('" & da1 & "','DD-MM-YYYY') AND Purchase_date <= TO_DATE('" & da2 & "','DD-MM-YYYY')"
-        Dim cmd As New OracleCommand(Query, cnn)
-        Dim r As OracleDataReader = cmd.ExecuteReader
+        Dim Query As String = "select SUM(PUNITS) from selles_table where purchase_date >= DATE('" & da1 & "') AND Purchase_date <= DATE('" & da2 & "')"
+        Dim cmd As New SQLiteCommand(Query, conn)
+        Dim r As SQLiteDataReader = cmd.ExecuteReader
         Try
 
             While r.Read
-                TotalProdut = r.GetString(0)
+                TotalProdut = r.GetInt32(0)
             End While
         Catch
             TotalProdut = 0
@@ -394,15 +394,15 @@ Public Class HomeForm
         TotalProductLabel.Text = TotalProdut
 
 
-        Query = "select pid,SUM(punits) as Units from selles_table where purchase_date >= TO_DATE('" & da1 & "','DD-MM-YYYY') AND Purchase_date <= TO_DATE('" & da2 & "','DD-MM-YYYY') group by pid"
-        cmd = New OracleCommand(Query, cnn)
+        Query = "select pid,SUM(punits) as Units from selles_table where purchase_date >= DATE('" & da1 & "') AND Purchase_date <= DATE('" & da2 & "') group by pid"
+        cmd = New SQLiteCommand(Query, conn)
         r = cmd.ExecuteReader
 
         Dim dt As New DataTable
         dt.Load(r)
         PSellDGV.DataSource = dt
 
-        cnn.Close()
+        conn.Close()
 
 
     End Sub
@@ -446,16 +446,16 @@ Public Class HomeForm
 
 
     Private Sub PRrefreshBtn_Click(sender As Object, e As EventArgs) Handles PRrefreshBtn.Click
-        cnn.Open()
+        conn.Open()
 
-        Dim cmd As New OracleCommand("select * from inventory_table ", cnn)
-        Dim reader As OracleDataReader = cmd.ExecuteReader
+        Dim cmd As New SQLiteCommand("select * from inventory_table ", conn)
+        Dim reader As SQLiteDataReader = cmd.ExecuteReader
         Dim dt As New DataTable
         dt.Load(reader)
         prductDGV3.DataSource = dt
 
 
-        cnn.Close()
+        conn.Close()
 
     End Sub
 
@@ -537,24 +537,24 @@ Public Class HomeForm
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        cnn.Open()
+        conn.Open()
 
         Dim D1 = DateTimePicker5.Value
-        Dim da1 As String = Format(D1, "dd-MM-yyyy")
+        Dim da1 As String = Format(D1, "yyyy-MM-dd")
 
         Dim D2 = DateTimePicker6.Value
-        Dim da2 As String = Format(D2, "dd-MM-yyyy")
+        Dim da2 As String = Format(D2, "yyyy-MM-dd")
 
 
 
-        Dim Query As String = "select USER_GROUP,sum(PUNITS) As Count , sum((sprice - cprice)*punits) as profit from selles_table,product_table where purchase_date >= TO_DATE('" & da1 & "','DD-MM-YYYY') AND Purchase_date <= TO_DATE('" & da2 & "','DD-MM-YYYY') and selles_table.pid = product_table.pid group by USER_GROUP"
+        Dim Query As String = "select user_group,sum(punits) As count , sum((selles_table.SPRICE - selles_table.cprice)*punits) as profit from selles_table,inventory_table where purchase_date >= DATE('" & da1 & "') AND Purchase_date <= DATE('" & da2 & "') and selles_table.pid = inventory_table.pid group by USER_GROUP"
 
-        Dim cmd As New OracleCommand(Query, cnn)
-        Dim reader As OracleDataReader = cmd.ExecuteReader
+        Dim cmd As New SQLiteCommand(Query, conn)
+        Dim reader As SQLiteDataReader = cmd.ExecuteReader
         Dim DT As New DataTable
         DT.Load(reader)
         UserGroupGDV.DataSource = DT
-        cnn.Close()
+        conn.Close()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -562,15 +562,15 @@ Public Class HomeForm
 
 
         If Regex.Match(TextBox1.Text, "\d", RegexOptions.ECMAScript).Success Then
-            cnn.Open()
+            conn.Open()
 
             Dim Query As String = "select pid,punits,cprice,sprice,purchase_date,cname,cphone from selles_table where tid =  " & Integer.Parse(TextBox1.Text)
-            Dim cmd As New OracleCommand(Query, cnn)
-            Dim reader As OracleDataReader = cmd.ExecuteReader
+            Dim cmd As New SQLiteCommand(Query, conn)
+            Dim reader As SQLiteDataReader = cmd.ExecuteReader
             Dim dt As New DataTable
             dt.Load(reader)
             TDGV1.DataSource = dt
-            cnn.Close()
+            conn.Close()
         Else
             MsgBox("Please Enter valid transaction id",, "")
         End If
@@ -581,18 +581,23 @@ Public Class HomeForm
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        cnn.Open()
+        conn.Open()
 
         Dim Query As String = "select tid,pid,punits,cprice,sprice,purchase_date,cname,cphone from selles_table "
-        Dim cmd As New OracleCommand(Query, cnn)
-        Dim reader As OracleDataReader = cmd.ExecuteReader
+        Dim cmd As New SQLiteCommand(Query, conn)
+        Dim reader As SQLiteDataReader = cmd.ExecuteReader
         Dim dt As New DataTable
         dt.Load(reader)
         TDGV1.DataSource = dt
-        cnn.Close()
+        conn.Close()
     End Sub
 
     Private Sub pid2CBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles pid2CBox.SelectedIndexChanged
 
+    End Sub
+
+    Private Sub SettingBtn_Click(sender As Object, e As EventArgs) Handles SettingBtn.Click
+        Me.Hide()
+        ChangePass.Show()
     End Sub
 End Class

@@ -1,23 +1,27 @@
-﻿Imports Oracle.ManagedDataAccess.Client
+﻿
+
+Imports System.Data.SQLite
 
 Public Class ProductForm
     Private Sub AddBtn_Click(sender As Object, e As EventArgs) Handles AddBtn.Click
-        cnn.Open()
+        conn.Open()
 
         Dim pid As Integer
-        Dim Query As String = "select max(pid) from product_table"
+        Dim Query As String = "select max(pid) from inventory_table"
 
-        Dim cmd As New OracleCommand(Query, cnn)
-        Dim reader As OracleDataReader = cmd.ExecuteReader
+        Dim cmd As New SQLiteCommand(Query, conn)
+
+        Dim reader As SQLiteDataReader = cmd.ExecuteReader
 
         Try
             While reader.Read
-                pid = Integer.Parse(reader.GetString(0))
+                pid = reader.GetInt32(0)
                 pid += 1
             End While
         Catch
             pid = 1
         End Try
+        conn.Close()
 
         Dim pname As String = PNameTBox.Text
         Dim psize As Integer = Integer.Parse(PSizeTBox.Text)
@@ -36,8 +40,9 @@ Public Class ProductForm
 
 
 
-        Query = "insert into inventory_table (pid,pname,psize,pstyle_name,pbrand,pcolor,user_group,product_type,hile,outer_material,sole_material,water_resistance,closure_type) values
+        Query = "insert into inventory_table (punits_available,cprice,sprice,pid,pname,psize,pstyle_name,pbrand,pcolor,user_group,product_type,hile,outer_material,sole_material,water_resistance,closure_type) values
         ( 
+            0,0,0,
             " & pid & ",
             '" & pname & "',
             " & psize & ",
@@ -52,10 +57,12 @@ Public Class ProductForm
             '" & water_resistance_level & "',
             '" & closure_type & "'
         )"
-
-        cmd = New OracleCommand(Query, cnn)
-        cmd.ExecuteNonQuery()
-        cnn.Close()
+        conn.Open()
+        '   cmd = New SQLiteCommand(Query, conn)
+        Dim cmd2 = conn.CreateCommand
+        cmd2.CommandText = Query
+        cmd2.ExecuteNonQuery()
+        conn.Close()
         MsgBox("Product Added successfully",, "")
     End Sub
 

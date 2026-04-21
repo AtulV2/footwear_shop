@@ -22,8 +22,10 @@ Partial Class HomeForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HomeForm))
         TableLayoutPanel1 = New TableLayoutPanel()
         Panel2 = New Panel()
+        SettingBtn = New Button()
         AnalysisBtn = New Button()
         Label7 = New Label()
         LOGO = New Label()
@@ -153,6 +155,7 @@ Partial Class HomeForm
         ' 
         ' Panel2
         ' 
+        Panel2.Controls.Add(SettingBtn)
         Panel2.Controls.Add(AnalysisBtn)
         Panel2.Controls.Add(Label7)
         Panel2.Controls.Add(LOGO)
@@ -167,11 +170,20 @@ Partial Class HomeForm
         Panel2.Size = New Size(222, 444)
         Panel2.TabIndex = 1
         ' 
+        ' SettingBtn
+        ' 
+        SettingBtn.Image = CType(resources.GetObject("SettingBtn.Image"), Image)
+        SettingBtn.Location = New Point(11, 414)
+        SettingBtn.Name = "SettingBtn"
+        SettingBtn.Size = New Size(39, 23)
+        SettingBtn.TabIndex = 5
+        SettingBtn.UseVisualStyleBackColor = True
+        ' 
         ' AnalysisBtn
         ' 
         AnalysisBtn.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         AnalysisBtn.BackColor = Color.FromArgb(CByte(213), CByte(213), CByte(255))
-        AnalysisBtn.Location = New Point(41, 320)
+        AnalysisBtn.Location = New Point(43, 307)
         AnalysisBtn.Name = "AnalysisBtn"
         AnalysisBtn.Size = New Size(123, 39)
         AnalysisBtn.TabIndex = 4
@@ -183,7 +195,7 @@ Partial Class HomeForm
         Label7.Anchor = AnchorStyles.Top
         Label7.AutoSize = True
         Label7.Font = New Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        Label7.Location = New Point(9, 54)
+        Label7.Location = New Point(11, 41)
         Label7.Name = "Label7"
         Label7.Size = New Size(205, 14)
         Label7.TabIndex = 3
@@ -194,7 +206,7 @@ Partial Class HomeForm
         LOGO.Anchor = AnchorStyles.Top
         LOGO.AutoSize = True
         LOGO.Font = New Font("Agbalumo", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point)
-        LOGO.Location = New Point(31, 20)
+        LOGO.Location = New Point(33, 7)
         LOGO.Name = "LOGO"
         LOGO.Size = New Size(158, 34)
         LOGO.TabIndex = 2
@@ -204,7 +216,7 @@ Partial Class HomeForm
         ' 
         transactionBtn.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         transactionBtn.BackColor = Color.FromArgb(CByte(255), CByte(233), CByte(209))
-        transactionBtn.Location = New Point(41, 381)
+        transactionBtn.Location = New Point(43, 368)
         transactionBtn.Name = "transactionBtn"
         transactionBtn.Size = New Size(123, 39)
         transactionBtn.TabIndex = 1
@@ -215,7 +227,7 @@ Partial Class HomeForm
         ' 
         SearchBtn.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         SearchBtn.BackColor = Color.FromArgb(CByte(212), CByte(241), CByte(239))
-        SearchBtn.Location = New Point(41, 143)
+        SearchBtn.Location = New Point(43, 130)
         SearchBtn.Name = "SearchBtn"
         SearchBtn.Size = New Size(123, 39)
         SearchBtn.TabIndex = 0
@@ -226,7 +238,7 @@ Partial Class HomeForm
         ' 
         SellBtn.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         SellBtn.BackColor = Color.FromArgb(CByte(213), CByte(241), CByte(229))
-        SellBtn.Location = New Point(41, 259)
+        SellBtn.Location = New Point(43, 246)
         SellBtn.Name = "SellBtn"
         SellBtn.Size = New Size(123, 39)
         SellBtn.TabIndex = 0
@@ -237,7 +249,7 @@ Partial Class HomeForm
         ' 
         InventoryBtn.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         InventoryBtn.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(216))
-        InventoryBtn.Location = New Point(41, 202)
+        InventoryBtn.Location = New Point(43, 189)
         InventoryBtn.Name = "InventoryBtn"
         InventoryBtn.Size = New Size(123, 39)
         InventoryBtn.TabIndex = 0
@@ -248,7 +260,7 @@ Partial Class HomeForm
         ' 
         ProductBtn.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         ProductBtn.BackColor = Color.FromArgb(CByte(255), CByte(228), CByte(233))
-        ProductBtn.Location = New Point(41, 88)
+        ProductBtn.Location = New Point(43, 75)
         ProductBtn.Name = "ProductBtn"
         ProductBtn.Size = New Size(123, 39)
         ProductBtn.TabIndex = 0
@@ -1032,6 +1044,7 @@ Partial Class HomeForm
         BackColor = Color.White
         ClientSize = New Size(800, 450)
         Controls.Add(TableLayoutPanel1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "HomeForm"
         Text = "Form1"
         TableLayoutPanel1.ResumeLayout(False)
@@ -1154,5 +1167,6 @@ Partial Class HomeForm
     Friend WithEvents Button2 As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button3 As Button
+    Friend WithEvents SettingBtn As Button
 
 End Class

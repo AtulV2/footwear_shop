@@ -1,8 +1,6 @@
-﻿Imports System.Diagnostics.Eventing
-Imports System.Security.Authentication.ExtendedProtection
-Imports System.Security.Cryptography
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar
-Imports Oracle.ManagedDataAccess.Client
+﻿
+
+Imports System.Data.SQLite
 
 Public Class ProductEditForm
     Private Sub ProductEditForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -12,22 +10,22 @@ Public Class ProductEditForm
 
 
     Private Sub AddItemsToComboBox()
-        cnn.Open()
-        Dim cmd As New OracleCommand("select pid from inventory_table", cnn)
-        Dim da As New OracleDataAdapter(cmd)
+        conn.Open()
+        Dim cmd As New SQLiteCommand("select pid from inventory_table", conn)
+        Dim da As New SQLiteDataAdapter(cmd)
         Dim db As DataTable = New DataTable
         da.Fill(db)
 
         ComboBox1.DisplayMember = "pid"
         ComboBox1.ValueMember = "pid"
         ComboBox1.DataSource = db
-        cnn.Close()
+        conn.Close()
     End Sub
 
     Private Sub EditBtn_Click(sender As Object, e As EventArgs) Handles EditBtn.Click
         Dim re As MsgBoxResult = MsgBox("Are You Sure ? this cannot be undo ", MsgBoxStyle.OkCancel, "")
         If re.Yes Then
-            cnn.Open()
+            conn.Open()
 
             Dim pid As Integer = Integer.Parse(ComboBox1.SelectedValue)
 
@@ -65,9 +63,9 @@ Public Class ProductEditForm
             where pid = " & pid & "
             "
 
-            Dim cmd As New OracleCommand(Query, cnn)
+            Dim cmd As New SQLiteCommand(Query, conn)
             cmd.ExecuteNonQuery()
-            cnn.Close()
+            conn.Close()
 
         End If
     End Sub
@@ -75,43 +73,45 @@ Public Class ProductEditForm
     Private Sub SearchBtn_Click(sender As Object, e As EventArgs) Handles SearchBtn.Click
         Dim pid As Integer = Integer.Parse(ComboBox1.SelectedValue)
 
-        cnn.Open()
+        conn.Open()
         Dim Query As String = "select * from inventory_table where pid = " & pid
-        Dim cmd As New OracleCommand(Query, cnn)
-        Dim reader As OracleDataReader = cmd.ExecuteReader
+        Dim cmd As New SQLiteCommand(Query, conn)
+        Dim reader As SQLiteDataReader = cmd.ExecuteReader
         While reader.Read
             PNameTBox.Text = reader.GetString(4)
-            PSizeTBox.Text = reader.GetString(5)
+            PSizeTBox.Text = reader.GetInt32(5)
             PStyle_NameTBox.Text = reader.GetString(6)
             PBrandTBox.Text = reader.GetString(7)
             PColorTBox.Text = reader.GetString(8)
             User_GroupTBox.Text = reader.GetString(9)
             Product_TypeTBox.Text = reader.GetString(10)
-            Hile_TypeTBox.Text = reader.GetString(11)
+            Hile_TypeTBox.Text = reader.GetInt32(11)
             Outer_MaterialTBox.Text = reader.GetString(12)
             Sole_MaterialTBox.Text = reader.GetString(13)
             Water_Resistance_LevelTBox.Text = reader.GetString(14)
             Closure_TypeTBox.Text = reader.GetString(15)
         End While
-        cnn.Close()
+        conn.Close()
 
     End Sub
 
     Private Sub DeleteBtn_Click(sender As Object, e As EventArgs) Handles DeleteBtn.Click
-        Dim pid As Integer = Integer.Parse(ComboBox1.SelectedValue)
+        Dim pid As Integer = Integer.Parse(ComboBox1.Text)
         Dim re As MsgBoxResult = MsgBox("Are You Sure Delete a product which id is " & pid, MsgBoxStyle.OkCancel, "")
         If re.Yes Then
-            cnn.Open()
+            conn.Open()
 
-            Dim Query As String = "delete inventory_table where pid = " & pid
-            Dim cmd As New OracleCommand(Query, cnn)
+            Dim Query As String = "delete from inventory_table where pid = " & pid
+            Dim cmd As SQLiteCommand
+            cmd = conn.CreateCommand
+            cmd.CommandText = Query
             cmd.ExecuteNonQuery()
 
             'Query = "delete inventory_table where pid = " & pid
             'cmd = New OracleCommand(Query, cnn)
             'cmd.ExecuteNonQuery()
 
-            cnn.Close()
+            conn.Close()
 
 
 

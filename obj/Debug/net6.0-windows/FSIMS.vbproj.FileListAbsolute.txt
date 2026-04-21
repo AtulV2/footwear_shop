@@ -60,3 +60,204 @@ D:\FootWearShop\obj\Debug\net6.0-windows\refint\FSIMS.dll
 D:\FootWearShop\obj\Debug\net6.0-windows\FSIMS.pdb
 D:\FootWearShop\obj\Debug\net6.0-windows\FSIMS.genruntimeconfig.cache
 D:\FootWearShop\obj\Debug\net6.0-windows\ref\FSIMS.dll
+D:\FootWearShop\obj\Debug\net6.0-windows\FSIMS.sourcelink.json
+D:\FSIMS2\testing\FootWearShop\obj\Debug\net6.0-windows\FSIMS.vbproj.AssemblyReference.cache
+D:\FSIMS2\testing\FootWearShop\obj\Debug\net6.0-windows\FSIMS.FilterViewForm.resources
+D:\FSIMS2\testing\FootWearShop\obj\Debug\net6.0-windows\FSIMS.HomeForm.resources
+D:\FSIMS2\testing\FootWearShop\obj\Debug\net6.0-windows\FSIMS.loginForm.resources
+D:\FSIMS2\testing\FootWearShop\obj\Debug\net6.0-windows\FSIMS.ProductEditForm.resources
+D:\FSIMS2\testing\FootWearShop\obj\Debug\net6.0-windows\FSIMS.ProductForm.resources
+D:\FSIMS2\testing\FootWearShop\obj\Debug\net6.0-windows\FSIMS.vbproj.GenerateResource.cache
+D:\FSIMS2\testing\FootWearShop\obj\Debug\net6.0-windows\FSIMS.GeneratedMSBuildEditorConfig.editorconfig
+D:\FSIMS2\testing\FootWearShop\obj\Debug\net6.0-windows\FSIMS.AssemblyInfoInputs.cache
+D:\FSIMS2\testing\FootWearShop\obj\Debug\net6.0-windows\FSIMS.AssemblyInfo.vb
+D:\FSIMS2\testing\FootWearShop\obj\Debug\net6.0-windows\FSIMS.vbproj.CoreCompileInputs.cache
+D:\FSIMS2\testing\FootWearShop\obj\Debug\net6.0-windows\FSIMS.sourcelink.json
+D:\FSIMS2\testing\FootWearShop\obj\Debug\net6.0-windows\FSIMS.dll
+D:\FSIMS2\testing\FootWearShop\obj\Debug\net6.0-windows\refint\FSIMS.dll
+D:\FSIMS2\testing\FootWearShop\obj\Debug\net6.0-windows\FSIMS.pdb
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\FSIMS.exe
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\FSIMS.deps.json
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\FSIMS.runtimeconfig.json
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\FSIMS.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\FSIMS.pdb
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\EntityFramework.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\Oracle.ManagedDataAccess.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\System.Data.SQLite.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\System.Data.SQLite.EF6.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\System.Diagnostics.PerformanceCounter.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\System.DirectoryServices.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\System.DirectoryServices.Protocols.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+D:\FSIMS2\testing\FootWearShop\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+D:\FSIMS2\testing\FootWearShop\obj\Debug\net6.0-windows\FSIMS.vbproj.CopyComplete
+D:\FSIMS2\testing\FootWearShop\obj\Debug\net6.0-windows\FSIMS.genruntimeconfig.cache
+D:\FSIMS2\testing\FootWearShop\obj\Debug\net6.0-windows\ref\FSIMS.dll
+D:\FSIMS2\testing\FootWear2\bin\Debug\net6.0-windows\FSIMS.exe
+D:\FSIMS2\testing\FootWear2\bin\Debug\net6.0-windows\FSIMS.deps.json
+D:\FSIMS2\testing\FootWear2\bin\Debug\net6.0-windows\FSIMS.runtimeconfig.json
+D:\FSIMS2\testing\FootWear2\bin\Debug\net6.0-windows\FSIMS.dll
+D:\FSIMS2\testing\FootWear2\bin\Debug\net6.0-windows\FSIMS.pdb
+D:\FSIMS2\testing\FootWear2\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+D:\FSIMS2\testing\FootWear2\bin\Debug\net6.0-windows\EntityFramework.dll
+D:\FSIMS2\testing\FootWear2\bin\Debug\net6.0-windows\System.Data.SQLite.dll
+D:\FSIMS2\testing\FootWear2\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\FSIMS2\testing\FootWear2\bin\Debug\net6.0-windows\System.Data.SQLite.EF6.dll
+D:\FSIMS2\testing\FootWear2\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\FSIMS2\testing\FootWear2\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\FSIMS2\testing\FootWear2\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\FSIMS2\testing\FootWear2\bin\Debug\net6.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+D:\FSIMS2\testing\FootWear2\bin\Debug\net6.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+D:\FSIMS2\testing\FootWear2\bin\Debug\net6.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+D:\FSIMS2\testing\FootWear2\bin\Debug\net6.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+D:\FSIMS2\testing\FootWear2\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\FSIMS2\testing\FootWear2\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\FSIMS2\testing\FootWear2\obj\Debug\net6.0-windows\FSIMS.vbproj.AssemblyReference.cache
+D:\FSIMS2\testing\FootWear2\obj\Debug\net6.0-windows\FSIMS.FilterViewForm.resources
+D:\FSIMS2\testing\FootWear2\obj\Debug\net6.0-windows\FSIMS.HomeForm.resources
+D:\FSIMS2\testing\FootWear2\obj\Debug\net6.0-windows\FSIMS.loginForm.resources
+D:\FSIMS2\testing\FootWear2\obj\Debug\net6.0-windows\FSIMS.ProductEditForm.resources
+D:\FSIMS2\testing\FootWear2\obj\Debug\net6.0-windows\FSIMS.ProductForm.resources
+D:\FSIMS2\testing\FootWear2\obj\Debug\net6.0-windows\FSIMS.vbproj.GenerateResource.cache
+D:\FSIMS2\testing\FootWear2\obj\Debug\net6.0-windows\FSIMS.GeneratedMSBuildEditorConfig.editorconfig
+D:\FSIMS2\testing\FootWear2\obj\Debug\net6.0-windows\FSIMS.AssemblyInfoInputs.cache
+D:\FSIMS2\testing\FootWear2\obj\Debug\net6.0-windows\FSIMS.AssemblyInfo.vb
+D:\FSIMS2\testing\FootWear2\obj\Debug\net6.0-windows\FSIMS.vbproj.CoreCompileInputs.cache
+D:\FSIMS2\testing\FootWear2\obj\Debug\net6.0-windows\FSIMS.sourcelink.json
+D:\FSIMS2\testing\FootWear2\obj\Debug\net6.0-windows\FSIMS.vbproj.CopyComplete
+D:\FSIMS2\testing\FootWear2\obj\Debug\net6.0-windows\FSIMS.dll
+D:\FSIMS2\testing\FootWear2\obj\Debug\net6.0-windows\refint\FSIMS.dll
+D:\FSIMS2\testing\FootWear2\obj\Debug\net6.0-windows\FSIMS.pdb
+D:\FSIMS2\testing\FootWear2\obj\Debug\net6.0-windows\FSIMS.genruntimeconfig.cache
+D:\FSIMS2\testing\FootWear2\obj\Debug\net6.0-windows\ref\FSIMS.dll
+D:\FSIMS2\testing\FootWear3\bin\Debug\net6.0-windows\FSIMS.exe
+D:\FSIMS2\testing\FootWear3\bin\Debug\net6.0-windows\FSIMS.deps.json
+D:\FSIMS2\testing\FootWear3\bin\Debug\net6.0-windows\FSIMS.runtimeconfig.json
+D:\FSIMS2\testing\FootWear3\bin\Debug\net6.0-windows\FSIMS.dll
+D:\FSIMS2\testing\FootWear3\bin\Debug\net6.0-windows\FSIMS.pdb
+D:\FSIMS2\testing\FootWear3\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+D:\FSIMS2\testing\FootWear3\bin\Debug\net6.0-windows\EntityFramework.dll
+D:\FSIMS2\testing\FootWear3\bin\Debug\net6.0-windows\System.Data.SQLite.dll
+D:\FSIMS2\testing\FootWear3\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\FSIMS2\testing\FootWear3\bin\Debug\net6.0-windows\System.Data.SQLite.EF6.dll
+D:\FSIMS2\testing\FootWear3\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\FSIMS2\testing\FootWear3\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\FSIMS2\testing\FootWear3\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\FSIMS2\testing\FootWear3\bin\Debug\net6.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+D:\FSIMS2\testing\FootWear3\bin\Debug\net6.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+D:\FSIMS2\testing\FootWear3\bin\Debug\net6.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+D:\FSIMS2\testing\FootWear3\bin\Debug\net6.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+D:\FSIMS2\testing\FootWear3\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\FSIMS2\testing\FootWear3\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\FSIMS2\testing\FootWear3\obj\Debug\net6.0-windows\FSIMS.vbproj.AssemblyReference.cache
+D:\FSIMS2\testing\FootWear3\obj\Debug\net6.0-windows\FSIMS.ChangePass.resources
+D:\FSIMS2\testing\FootWear3\obj\Debug\net6.0-windows\FSIMS.FilterViewForm.resources
+D:\FSIMS2\testing\FootWear3\obj\Debug\net6.0-windows\FSIMS.HomeForm.resources
+D:\FSIMS2\testing\FootWear3\obj\Debug\net6.0-windows\FSIMS.loginForm.resources
+D:\FSIMS2\testing\FootWear3\obj\Debug\net6.0-windows\FSIMS.Resources.resources
+D:\FSIMS2\testing\FootWear3\obj\Debug\net6.0-windows\FSIMS.ProductEditForm.resources
+D:\FSIMS2\testing\FootWear3\obj\Debug\net6.0-windows\FSIMS.ProductForm.resources
+D:\FSIMS2\testing\FootWear3\obj\Debug\net6.0-windows\FSIMS.vbproj.GenerateResource.cache
+D:\FSIMS2\testing\FootWear3\obj\Debug\net6.0-windows\FSIMS.GeneratedMSBuildEditorConfig.editorconfig
+D:\FSIMS2\testing\FootWear3\obj\Debug\net6.0-windows\FSIMS.AssemblyInfoInputs.cache
+D:\FSIMS2\testing\FootWear3\obj\Debug\net6.0-windows\FSIMS.AssemblyInfo.vb
+D:\FSIMS2\testing\FootWear3\obj\Debug\net6.0-windows\FSIMS.vbproj.CoreCompileInputs.cache
+D:\FSIMS2\testing\FootWear3\obj\Debug\net6.0-windows\FSIMS.sourcelink.json
+D:\FSIMS2\testing\FootWear3\obj\Debug\net6.0-windows\FSIMS.vbproj.CopyComplete
+D:\FSIMS2\testing\FootWear3\obj\Debug\net6.0-windows\FSIMS.dll
+D:\FSIMS2\testing\FootWear3\obj\Debug\net6.0-windows\refint\FSIMS.dll
+D:\FSIMS2\testing\FootWear3\obj\Debug\net6.0-windows\FSIMS.pdb
+D:\FSIMS2\testing\FootWear3\obj\Debug\net6.0-windows\FSIMS.genruntimeconfig.cache
+D:\FSIMS2\testing\FootWear3\obj\Debug\net6.0-windows\ref\FSIMS.dll
+D:\FootWearShop\FootWear4\bin\Debug\net6.0-windows\FSIMS.exe
+D:\FootWearShop\FootWear4\bin\Debug\net6.0-windows\FSIMS.deps.json
+D:\FootWearShop\FootWear4\bin\Debug\net6.0-windows\FSIMS.runtimeconfig.json
+D:\FootWearShop\FootWear4\bin\Debug\net6.0-windows\FSIMS.dll
+D:\FootWearShop\FootWear4\bin\Debug\net6.0-windows\FSIMS.pdb
+D:\FootWearShop\FootWear4\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+D:\FootWearShop\FootWear4\bin\Debug\net6.0-windows\EntityFramework.dll
+D:\FootWearShop\FootWear4\bin\Debug\net6.0-windows\System.Data.SQLite.dll
+D:\FootWearShop\FootWear4\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\FootWearShop\FootWear4\bin\Debug\net6.0-windows\System.Data.SQLite.EF6.dll
+D:\FootWearShop\FootWear4\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\FootWearShop\FootWear4\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\FootWearShop\FootWear4\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\FootWearShop\FootWear4\bin\Debug\net6.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+D:\FootWearShop\FootWear4\bin\Debug\net6.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+D:\FootWearShop\FootWear4\bin\Debug\net6.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+D:\FootWearShop\FootWear4\bin\Debug\net6.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+D:\FootWearShop\FootWear4\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\FootWearShop\FootWear4\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\FootWearShop\FootWear4\obj\Debug\net6.0-windows\FSIMS.vbproj.AssemblyReference.cache
+D:\FootWearShop\FootWear4\obj\Debug\net6.0-windows\FSIMS.ChangePass.resources
+D:\FootWearShop\FootWear4\obj\Debug\net6.0-windows\FSIMS.FilterViewForm.resources
+D:\FootWearShop\FootWear4\obj\Debug\net6.0-windows\FSIMS.HomeForm.resources
+D:\FootWearShop\FootWear4\obj\Debug\net6.0-windows\FSIMS.loginForm.resources
+D:\FootWearShop\FootWear4\obj\Debug\net6.0-windows\FSIMS.Resources.resources
+D:\FootWearShop\FootWear4\obj\Debug\net6.0-windows\FSIMS.ProductEditForm.resources
+D:\FootWearShop\FootWear4\obj\Debug\net6.0-windows\FSIMS.ProductForm.resources
+D:\FootWearShop\FootWear4\obj\Debug\net6.0-windows\FSIMS.vbproj.GenerateResource.cache
+D:\FootWearShop\FootWear4\obj\Debug\net6.0-windows\FSIMS.GeneratedMSBuildEditorConfig.editorconfig
+D:\FootWearShop\FootWear4\obj\Debug\net6.0-windows\FSIMS.AssemblyInfoInputs.cache
+D:\FootWearShop\FootWear4\obj\Debug\net6.0-windows\FSIMS.AssemblyInfo.vb
+D:\FootWearShop\FootWear4\obj\Debug\net6.0-windows\FSIMS.vbproj.CoreCompileInputs.cache
+D:\FootWearShop\FootWear4\obj\Debug\net6.0-windows\FSIMS.sourcelink.json
+D:\FootWearShop\FootWear4\obj\Debug\net6.0-windows\FSIMS.vbproj.CopyComplete
+D:\FootWearShop\FootWear4\obj\Debug\net6.0-windows\FSIMS.dll
+D:\FootWearShop\FootWear4\obj\Debug\net6.0-windows\refint\FSIMS.dll
+D:\FootWearShop\FootWear4\obj\Debug\net6.0-windows\FSIMS.pdb
+D:\FootWearShop\FootWear4\obj\Debug\net6.0-windows\FSIMS.genruntimeconfig.cache
+D:\FootWearShop\FootWear4\obj\Debug\net6.0-windows\ref\FSIMS.dll
+D:\Footwear Shop\source code\bin\Debug\net6.0-windows\FSIMS.exe
+D:\Footwear Shop\source code\bin\Debug\net6.0-windows\FSIMS.deps.json
+D:\Footwear Shop\source code\bin\Debug\net6.0-windows\FSIMS.runtimeconfig.json
+D:\Footwear Shop\source code\bin\Debug\net6.0-windows\FSIMS.dll
+D:\Footwear Shop\source code\bin\Debug\net6.0-windows\FSIMS.pdb
+D:\Footwear Shop\source code\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+D:\Footwear Shop\source code\bin\Debug\net6.0-windows\EntityFramework.dll
+D:\Footwear Shop\source code\bin\Debug\net6.0-windows\System.Data.SQLite.dll
+D:\Footwear Shop\source code\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\Footwear Shop\source code\bin\Debug\net6.0-windows\System.Data.SQLite.EF6.dll
+D:\Footwear Shop\source code\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Footwear Shop\source code\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\Footwear Shop\source code\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\Footwear Shop\source code\bin\Debug\net6.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+D:\Footwear Shop\source code\bin\Debug\net6.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+D:\Footwear Shop\source code\bin\Debug\net6.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+D:\Footwear Shop\source code\bin\Debug\net6.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+D:\Footwear Shop\source code\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Footwear Shop\source code\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Footwear Shop\source code\obj\Debug\net6.0-windows\FSIMS.vbproj.AssemblyReference.cache
+D:\Footwear Shop\source code\obj\Debug\net6.0-windows\FSIMS.ChangePass.resources
+D:\Footwear Shop\source code\obj\Debug\net6.0-windows\FSIMS.FilterViewForm.resources
+D:\Footwear Shop\source code\obj\Debug\net6.0-windows\FSIMS.HomeForm.resources
+D:\Footwear Shop\source code\obj\Debug\net6.0-windows\FSIMS.loginForm.resources
+D:\Footwear Shop\source code\obj\Debug\net6.0-windows\FSIMS.Resources.resources
+D:\Footwear Shop\source code\obj\Debug\net6.0-windows\FSIMS.ProductEditForm.resources
+D:\Footwear Shop\source code\obj\Debug\net6.0-windows\FSIMS.ProductForm.resources
+D:\Footwear Shop\source code\obj\Debug\net6.0-windows\FSIMS.vbproj.GenerateResource.cache
+D:\Footwear Shop\source code\obj\Debug\net6.0-windows\FSIMS.GeneratedMSBuildEditorConfig.editorconfig
+D:\Footwear Shop\source code\obj\Debug\net6.0-windows\FSIMS.AssemblyInfoInputs.cache
+D:\Footwear Shop\source code\obj\Debug\net6.0-windows\FSIMS.AssemblyInfo.vb
+D:\Footwear Shop\source code\obj\Debug\net6.0-windows\FSIMS.vbproj.CoreCompileInputs.cache
+D:\Footwear Shop\source code\obj\Debug\net6.0-windows\FSIMS.sourcelink.json
+D:\Footwear Shop\source code\obj\Debug\net6.0-windows\FSIMS.vbproj.CopyComplete
+D:\Footwear Shop\source code\obj\Debug\net6.0-windows\FSIMS.dll
+D:\Footwear Shop\source code\obj\Debug\net6.0-windows\refint\FSIMS.dll
+D:\Footwear Shop\source code\obj\Debug\net6.0-windows\FSIMS.pdb
+D:\Footwear Shop\source code\obj\Debug\net6.0-windows\FSIMS.genruntimeconfig.cache
+D:\Footwear Shop\source code\obj\Debug\net6.0-windows\ref\FSIMS.dll

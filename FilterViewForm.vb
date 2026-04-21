@@ -1,5 +1,7 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-Imports Oracle.ManagedDataAccess.Client
+﻿
+
+
+Imports System.Data.SQLite
 
 Public Class FilterViewForm
     Private Sub FilterBtn_Click(sender As Object, e As EventArgs) Handles FilterBtn.Click
@@ -87,19 +89,16 @@ outer_material like '" & outer_material & "'         and
 water_resistance like '" & water_resistance_level & "' and 
 closure_type like   '" & closure_type & "'         "
 
-        cnn.Open()
-        Dim cmd As New OracleCommand(Query, cnn)
-        Dim reader As OracleDataReader = cmd.ExecuteReader
+        conn.Open()
+        Dim cmd As New SQLiteCommand(Query, conn)
+        Dim reader As SQLiteDataReader = cmd.ExecuteReader
         Dim dt As New DataTable
         dt.Load(reader)
         DataGridView1.DataSource = dt
-        cnn.Close()
+        conn.Close()
     End Sub
 
-    Private Sub FilterViewForm_Closed(sender As Object, e As EventArgs) Handles MyBase.Closed
-        loginForm.Close()
 
-    End Sub
 
     Private Sub BackBtn_Click(sender As Object, e As EventArgs) Handles BackBtn.Click
         Me.Hide()
